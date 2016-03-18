@@ -1,0 +1,22 @@
+{
+  "name": "gitapi",
+  "description": "code review 1: js",
+  "main": "gulpfile.js",
+  "authors": [
+    "Mollie Bootsma"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mollieboots/git-api-CR1-js",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.1",
+    "bootstrap": "~3.3.6"
+  }
+}

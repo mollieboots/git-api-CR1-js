@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Git User Search</title>
+      <link rel="stylesheet" href="build/css/vendor.css">
+      <link rel="stylesheet" href="build/css/styles.css">
+      <script src="build/js/vendor.min.js"></script>
+      <script type="text/javascript" src="build/js/app.js"></script>
+      <title>Git User Search</title>
     </head>
     <body>
+      <div class="jumbotron">
+        <div class="container">
+          <h1>GitHub User Search</h1>
+        </div>
+      </div>
+      <div class="container">
+        <label for="username">Enter a GitHub Username:</label>
+        <input type="text" id="username" value="">
 
+        <button class="btn btn-primary" type="submit" id="search">Search</button>
+
+        <div id="output">
+
+        </div>
+      </div>
     </body>
 </html>
