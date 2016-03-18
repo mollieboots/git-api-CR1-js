@@ -4,14 +4,21 @@
   padding: 15px;
   border-radius: 8px;
   margin: 15px 0px;
+
+  .user_img {
+    height: 150px;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .user_name {
+    margin-top: 0px;
+  }
+
 }
 
-.user_img {
-  height: 150px;
-  float: left;
-  margin-right: 15px;
-}
-
-.user_name {
-  margin-top: 0px;
+body {
+  h1 {
+    font-family: 'Playfair Display', serif;
+  }
 }
