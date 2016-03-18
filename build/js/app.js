@@ -4,27 +4,26 @@ exports.apiKey = "f49fd7cbd8bd168701b767f68cb0c4af4e691d90";
 },{}],2:[function(require,module,exports){
 var apiKey = require('./../.env').apiKey;
 
-function getRepos(username){
+exports.getRepos = function(username){
   $.get('https://api.github.com/users/' + username + '?access_token=' + apiKey).then(function(response){
+    $('#output').append("<div class='user_info'><img class='user_img' src='" + response.avatar_url + "'><h2 class='user_name'>" + response.login + "</h2><h4>" + response.location + "</h4><p>Followers: " + response.followers + "</p><p>Following: " + response.following + "</p><p>Account Created: " + response.created_at + "</p>");
     console.log(response);
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
 };
 
+},{"./../.env":1}],3:[function(require,module,exports){
+var apiKey = require('./../.env').apiKey;
+var getRepos = require('./../js/getRepos.js').getRepos;
+
 $(document).ready(function() {
   $('#search').click(function() {
     var username = $('#username').val();
     $('#username').val("");
     console.log(username);
-    $.get('https://api.github.com/users/' + username + '?access_token=' + apiKey).then(function(response){
-      $('#output').append("<div class='user_info'><img class='user_img' src='" + response.avatar_url + "'><h2 class='user_name'>" + response.login + "</h2><h4>" + response.location + "</h4><p>Followers: " + response.followers + "</p><p>Following: " + response.following + "</p><p>Account Created: " + response.created_at + "</p>");
-
-      console.log(response);
-    }).fail(function(error){
-      console.log(error.responseJSON.message);
-    });
+    getRepos(username);
   });
 });
 
-},{"./../.env":1}]},{},[2]);
+},{"./../.env":1,"./../js/getRepos.js":2}]},{},[3]);
