@@ -6,12 +6,13 @@ $yellow: #EBE6AE;
   padding: 15px;
   border-radius: 8px;
   margin: 15px 0px;
-
+  min-height: 175px;
 
   .user_img {
     height: 150px;
     float: left;
     margin-right: 15px;
+    border-radius: 8px;
   }
 
   .user_name {
@@ -19,6 +20,16 @@ $yellow: #EBE6AE;
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 900;
+  }
+
+  a {
+    font-weight: 900;
+    color: #7A785B;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #333;
   }
 
 }
@@ -46,4 +57,8 @@ body {
   font-style: italic;
   font-weight: 900;
   background-color: $yellow !important;
+}
+
+input {
+  border-radius: 8px;
 }
