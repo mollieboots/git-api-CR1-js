@@ -1,4 +1,5 @@
 $yellow: #EBE6AE;
+$darker-yellow: #7A785B;
 
 .user_info {
   width: 100%;
@@ -24,7 +25,7 @@ $yellow: #EBE6AE;
 
   a {
     font-weight: 900;
-    color: #7A785B;
+    color: $darker-yellow;
   }
 
   a:hover {
@@ -57,8 +58,17 @@ body {
   font-style: italic;
   font-weight: 900;
   background-color: $yellow !important;
+
+  .btn:hover {
+      background-color: $darker-yellow !important;
+  }
 }
 
 input {
   border-radius: 8px;
+  border: 2px grey solid;
+
+  input:focus {
+      outline: none;
+  }
 }
